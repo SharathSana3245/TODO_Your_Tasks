@@ -1,5 +1,12 @@
 import { useEffect, useState } from "react";
-import { Box, Button, Typography, Grid, useTheme, Paper } from "@mui/material";
+import {
+  Box,
+  Button,
+  Typography,
+  Grid,
+  IconButton,
+  Paper,
+} from "@mui/material";
 import {
   Lightbulb,
   CheckCircle,
@@ -10,7 +17,8 @@ import {
 import TodoList from "./Todolist";
 import Todo from "./Todo";
 import { getAllTodos } from "./todoOpp";
-
+import { Brightness4, Brightness7 } from "@mui/icons-material";
+import { useThemeMode } from "./ThemeContainer";
 const FeatureCard = ({ icon: Icon, title, description }) => (
   <Paper elevation={3} sx={{ p: 3, borderRadius: 3 }}>
     <Box display="flex" alignItems="center" mb={1}>
@@ -24,7 +32,7 @@ const FeatureCard = ({ icon: Icon, title, description }) => (
 );
 
 const HomePage = () => {
-  const theme = useTheme();
+  const { toggleTheme, mode } = useThemeMode();
   const [addTodoOpen, setAddTodoOpen] = useState(false);
   const [todos, setTodos] = useState([]);
 
@@ -53,6 +61,9 @@ const HomePage = () => {
   return (
     <Box sx={{ px: 3, py: 6 }}>
       {/* Hero Section */}
+      <IconButton onClick={toggleTheme} color="inherit">
+        {mode === "dark" ? <Brightness7 /> : <Brightness4 />}
+      </IconButton>
       <Box textAlign="center" mb={6}>
         <Typography variant="h3" fontWeight="bold" gutterBottom>
           Stay Organized. Anytime. Anywhere.
