@@ -58,7 +58,7 @@ function Todo() {
   const addTask = async () => {
     const { title, description, date, time } = todo;
     if (!title || !description || !date || !time) {
-      alert("Please fill all fields");
+      alert("Please fill all fields correctly");
       return;
     }
 
