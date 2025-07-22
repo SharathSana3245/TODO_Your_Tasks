@@ -1,8 +1,9 @@
 import React from "react";
 
 import RemainderCheck from "./RemainderCheck";
-import Home from "./HomePage";
+import HomePage from "./HomePage";
 import { NotificationProvider } from "./NotificationContext";
+import { ThemeProvider } from "./ThemeContainer";
 
 export default function App() {
   React.useEffect(() => {
@@ -12,10 +13,12 @@ export default function App() {
   }, []);
   return (
     <NotificationProvider>
-      <div className="App">
-        <RemainderCheck />
-        <Home />
-      </div>
+      <ThemeProvider>
+        <div className="App">
+          <RemainderCheck />
+          <HomePage />
+        </div>
+      </ThemeProvider>
     </NotificationProvider>
   );
 }
