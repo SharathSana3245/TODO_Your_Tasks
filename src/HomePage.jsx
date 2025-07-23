@@ -16,7 +16,7 @@ import {
 } from "@mui/icons-material";
 import TodoList from "./Todolist";
 import Todo from "./Todo";
-import { getAllTodos } from "./todoOpp";
+import { getAllTodos } from "./todoOppBackend";
 import { Brightness4, Brightness7 } from "@mui/icons-material";
 import { useThemeMode } from "./ThemeContainer";
 const FeatureCard = ({ icon: Icon, title, description }) => (
@@ -70,7 +70,7 @@ const HomePage = () => {
         </Typography>
         <Typography variant="h6" color="text.secondary" gutterBottom>
           A simple, offline-first Todo App built with ❤️ using React, IndexedDB,
-          and PWA.
+          and PWA and
         </Typography>
         <Button
           variant="contained"

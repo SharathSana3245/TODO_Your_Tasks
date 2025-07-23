@@ -20,7 +20,7 @@ export function openDB() {
 }
 
 // ✅ Get all todos
-export const getAllTodos = async () => {
+export const getAllTodosIDB = async () => {
   const db = await openDB();
   const objectStore = db
     .transaction(STORE_NAME, "readonly")
@@ -34,7 +34,7 @@ export const getAllTodos = async () => {
 };
 
 // ✅ Add a new todo
-export const addTodo = async (todo) => {
+export const addTodoIDB = async (todo) => {
   const db = await openDB();
   const objectStore = db
     .transaction(STORE_NAME, "readwrite")
@@ -48,7 +48,7 @@ export const addTodo = async (todo) => {
 };
 
 // ✅ Update a todo (requires todo.id to exist)
-export const updateTodo = async (todo) => {
+export const updateTodoIDB = async (todo) => {
   const db = await openDB();
   const objectStore = db
     .transaction(STORE_NAME, "readwrite")
@@ -62,7 +62,7 @@ export const updateTodo = async (todo) => {
 };
 
 // ✅ Delete a todo by ID
-export const deleteTodo = async (id) => {
+export const deleteTodoIDB = async (id) => {
   const db = await openDB();
   const objectStore = db
     .transaction(STORE_NAME, "readwrite")

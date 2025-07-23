@@ -15,7 +15,7 @@ const light = {
     mode: "light",
     background: {
       default: "#f9f9f9",
-      paper: "#ffffff",
+      paper: "#F9FAFB",
     },
     primary: {
       main: "#1976d2", // blue
@@ -35,7 +35,7 @@ const dark = {
     mode: "dark",
     background: {
       default: "#121212",
-      paper: "#1d1d1d",
+      paper: "#0F172A",
     },
     primary: {
       main: "#90caf9", // light blue

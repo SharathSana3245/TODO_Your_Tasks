@@ -12,7 +12,7 @@ import {
 import CloseIcon from "@mui/icons-material/Close";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
-import { deleteTodo } from "./todoOpp";
+import { deleteTodo } from "./todoOppBackend";
 import Todo from "./Todo";
 
 const TodoList = ({ todos, onTodoRecords }) => {
