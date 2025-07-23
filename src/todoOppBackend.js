@@ -28,7 +28,7 @@ export const addTodo = async (todo) => {
 };
 
 // ✅ Fetch Todos (Firebase → sync into IndexedDB → return IndexedDB)
-export const fetchTodos = async () => {
+export const getAllTodos = async () => {
   const snapshot = await getDocs(getUserTodosRef());
   const todos = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
 

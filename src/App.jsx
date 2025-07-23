@@ -4,6 +4,7 @@ import RemainderCheck from "./RemainderCheck";
 import HomePage from "./HomePage";
 import { NotificationProvider } from "./NotificationContext";
 import { ThemeProvider } from "./ThemeContainer";
+import { AuthProvider } from "./utils/AuthContext";
 
 export default function App() {
   React.useEffect(() => {
@@ -12,7 +13,8 @@ export default function App() {
     }
   }, []);
   return (
-    <NotificationProvider>
+    <AuthProvider>
+       <NotificationProvider>
       <ThemeProvider>
         <div className="App">
           <RemainderCheck />
@@ -20,5 +22,7 @@ export default function App() {
         </div>
       </ThemeProvider>
     </NotificationProvider>
+    </AuthProvider>
+   
   );
 }

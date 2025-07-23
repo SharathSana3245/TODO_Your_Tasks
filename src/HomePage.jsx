@@ -14,7 +14,7 @@ import {
   CalendarToday,
   Close as CloseIcon,
 } from "@mui/icons-material";
-import TodoList from "./Todolist";
+import TodoList from './TodoList'
 import Todo from "./Todo";
 import { getAllTodos } from "./todoOppBackend";
 import { Brightness4, Brightness7 } from "@mui/icons-material";

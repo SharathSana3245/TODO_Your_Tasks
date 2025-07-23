@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useNotification } from "./NotificationContext";
-import { getAllTodos } from "./todoOpp";
+import { getAllTodos } from "./todoOppBackend";
 
 const ReminderChecker = () => {
   const { showNotification } = useNotification();
